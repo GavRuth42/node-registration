@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "please2",
+      "password": "Jaxon4266$",
+      "database": "my_database",
+      "host": "ec2-3-90-49-46.compute-1.amazonaws.com",
+      "dialect": "mysql"
+    }
+  }
