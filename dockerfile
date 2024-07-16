@@ -10,4 +10,4 @@ COPY . .
  
 EXPOSE 3000
  
-CMD ["node", "models/index.js"]
+CMD ["node", "index.js"]
