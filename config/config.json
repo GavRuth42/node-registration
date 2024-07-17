@@ -3,7 +3,7 @@
       "username": "please2",
       "password": "Jaxon4266$",
       "database": "my_database",
-      "host": "ec2-54-224-56-44.compute-1.amazonaws.com",
+      "host": "ec2-3-215-102-128.compute-1.amazonaws.com",
       "dialect": "mysql"
     }
   }
