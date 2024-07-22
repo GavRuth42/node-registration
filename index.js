@@ -1,12 +1,13 @@
-// index.js
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const db = require('./models');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
 
 // Sync Database
 db.sequelize.sync().then(() => {
