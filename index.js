@@ -40,27 +40,7 @@ app.post('/register', async (req, res) => {
     res.status(201).json(user);
 });
 
-// Login Route
-app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
 
-    // Find user by username
-    const user = await db.User.findOne({ where: { username } });
-    if (!user) {
-        return res.status(400).json({ message: 'Invalid username or password' });
-    }
-
-    // Check password
-    const validPassword = await bcrypt.compare(password, user.password);
-    if (!validPassword) {
-        return res.status(400).json({ message: 'Invalid username or password' });
-    }
-
-    // Create token
-    const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1h' });
-
-    res.json({ token });
-});
 
 // Start Server
 const PORT = process.env.PORT || 3000;
